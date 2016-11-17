@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--业务流程节点分析-->
+<mapper namespace="com.test.boot.dao.hello.HelloMapper">
+    <resultMap type="com.test.boot.entity.AreaBean" id="area">
+        <result property="areaNum" column="F_AREA_NUM" />
+        <result property="areaName" column="F_AREA_NAME" />
+    </resultMap>
+
+	<select id="queryAreaList" resultMap="area">
+		SELECT * FROM T_DA_AREA
+	</select>
+
+</mapper>
